@@ -7,3 +7,5 @@ Apache Spark provides its users the ability to implement Decision Trees algorith
 + HTML
 + JavaScript
 + D3.js
+## Usage
+This is my own implementation and it works great for me, so you are free to use it, modify it, and create magic with it! 
