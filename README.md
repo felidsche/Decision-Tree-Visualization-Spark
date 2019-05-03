@@ -9,3 +9,7 @@ Apache Spark provides its users the ability to implement Decision Trees algorith
 + D3.js
 ## Usage
 This is my own implementation and it works great for me, so you are free to use it, modify it, and create magic with it! 
+
+## Live Demo
+[Horizontal Tree](http://jsfiddle.net/coma123/p481fg25/)
+[Vertical Tree](http://jsfiddle.net/coma123/3fgp7a6s/)
