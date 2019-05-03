@@ -13,5 +13,5 @@ This is my own implementation and it works great for me, so you are free to use 
 In Apache Zeppelin click Import Note and load 'decision-tree-zeppelin-notebook.json' as new notebook.
 
 ## Live Demo
-[Horizontal Tree](http://jsfiddle.net/coma123/p481fg25/) <br />
-[Vertical Tree](http://jsfiddle.net/coma123/3fgp7a6s/)
+[Horizontal Tree](http://jsfiddle.net/coma123/p481fg25/){:target="_blank"} <br />
+[Vertical Tree](http://jsfiddle.net/coma123/3fgp7a6s/){:target="_blank"}
