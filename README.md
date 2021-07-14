@@ -13,3 +13,5 @@ Apache Spark provides its users the ability to implement Decision Trees algorith
 1. copy the `str` value of your Decision Tree `model.toDebugString` in `DT.py`
 2. run `DT.py` to create `data/structure.json`
 - run `visualize.html` on `localhost` (e.g. let PyCharm be your Webserver) to see the horizontal tree
+
+## Example
