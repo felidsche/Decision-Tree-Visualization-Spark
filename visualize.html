@@ -10,17 +10,17 @@
 .node circle {
   fill: #fff;
   stroke: steelblue;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
 }
 
 .node text {
-  font: 10px sans-serif;
+  font: 12px "Helvetica Neue";
 }
 
 .link {
   fill: none;
   stroke: #ccc;
-  stroke-width: 1.5px;
+  stroke-width: 2px;
 }
 
 </style>
@@ -30,9 +30,9 @@
 
 <script>
 
-var margin = {top: 20, right: 400, bottom: 20, left: 300},
-    width = 1100 - margin.right - margin.left,
-    height = 480 - margin.top - margin.bottom;
+var margin = {top: 0, right: 0, bottom: 0, left: 50},
+    width = 1920 - margin.right - margin.left,
+    height = 1080 - margin.top - margin.bottom;
 
 var i = 0,
     duration = 750,
@@ -181,7 +181,7 @@ function click(d) {
   update(d);
 }
 function printpng() {
-saveSvgAsPng(document.getElementById("svgAtt"), "svg.png");
+saveSvgAsPng(document.getElementById("svgAtt"), "tree.png");
 }
 </script>
 <button onclick="printpng();">Export</button>
