@@ -15,3 +15,4 @@ Apache Spark provides its users the ability to implement Decision Trees algorith
 - run `visualize.html` on `localhost` (e.g. let PyCharm be your Webserver) to see the horizontal tree
 
 ## Example
+![Decision tree example](https://github.com/felidsche/Decision-Tree-Visualization-Spark/blob/master/alibaba2017-task-prediction-decision-tree.png "Decision tree example")
