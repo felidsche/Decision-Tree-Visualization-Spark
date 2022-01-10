@@ -11,75 +11,162 @@ if __name__ == "__main__":
     Model: Decision tree
     Dataset: Alibaba 2017
     """
-    tree_to_json = """DecisionTreeRegressionModel: uid=DecisionTreeRegressor_03b82f73f50f, depth=5, numNodes=45, numFeatures=10
-  If (plan_cpu <= 45.0)
-   If (duration_task <= 0.058333333333333334)
-    If (real_cpu_max <= 1.7549999952316284)
-     If (real_memory_max <= 8.153650851454586E-4)
-      Predict: 1.0
-     Else (real_memory_max > 8.153650851454586E-4)
-      If (real_cpu_avg <= 0.625)
-       Predict: 0.0
-      Else (real_cpu_avg > 0.625)
-       Predict: 0.17647058823529413
-    Else (real_cpu_max > 1.7549999952316284)
-     If (real_memory_avg <= 0.0020008800784125924)
-      If (duration_instance <= 0.04166666666666667)
-       Predict: 1.0
-      Else (duration_instance > 0.04166666666666667)
-       Predict: 0.0
-     Else (real_memory_avg > 0.0020008800784125924)
-      Predict: 0.0
-   Else (duration_task > 0.058333333333333334)
-    If (number_of_instances <= 5.5)
-     If (duration_instance <= 0.025)
-      Predict: 1.0
-     Else (duration_instance > 0.025)
-      Predict: 0.0
-    Else (number_of_instances > 5.5)
-     Predict: 0.0
-  Else (plan_cpu > 45.0)
-   If (plan_memory <= 0.00891724694520235)
-    If (number_of_instances <= 5.5)
-     If (real_memory_max <= 0.009823208209127188)
-      Predict: 0.0
-     Else (real_memory_max > 0.009823208209127188)
-      If (real_memory_avg <= 0.005717909662052989)
-       Predict: 0.00398406374501992
-      Else (real_memory_avg > 0.005717909662052989)
-       Predict: 4.336513443191674E-4
-    Else (number_of_instances > 5.5)
-     If (real_cpu_max <= 7.085000038146973)
-      If (real_memory_max <= 0.02645665593445301)
-       Predict: 5.241749486308551E-6
-      Else (real_memory_max > 0.02645665593445301)
-       Predict: 3.336224728097685E-5
-     Else (real_cpu_max > 7.085000038146973)
-      If (plan_memory <= 0.0041078871581703424)
-       Predict: 0.009900990099009901
-      Else (plan_memory > 0.0041078871581703424)
-       Predict: 9.707795359673819E-5
-   Else (plan_memory > 0.00891724694520235)
-    If (real_cpu_avg <= 0.014999999664723873)
-     If (real_memory_avg <= 6.704113038722426E-4)
-      If (number_of_instances <= 5.5)
-       Predict: 0.0
-      Else (number_of_instances > 5.5)
-       Predict: 1.0
-     Else (real_memory_avg > 6.704113038722426E-4)
-      Predict: 0.0
-    Else (real_cpu_avg > 0.014999999664723873)
-     If (real_cpu_max <= 5.295000076293945)
-      If (number_of_instances <= 34.5)
-       Predict: 0.0010686044026501388
-      Else (number_of_instances > 34.5)
-       Predict: 2.0320483046911287E-4
-     Else (real_cpu_max > 5.295000076293945)
-      If (duration_task <= 1.0083333333333333)
-       Predict: 2.3634376200183167E-4
-      Else (duration_task > 1.0083333333333333)
-       Predict: 1.2339585389930897E-5
-"""
+    tree_to_json = """GBTClassificationModel: uid = gbtc_ceb4315c6291, numTrees=20, numClasses=2, numFeatures=21
+    If (feature 12 <= 1.5)
+     If (feature 1 <= 50077.0)
+      If (feature 2 <= 9.5)
+       If (feature 10 <= 88097.0)
+        If (feature 1 <= 771.5)
+         If (feature 9 <= 103969.0)
+          If (feature 5 <= 22.5)
+           Predict: -1.0
+          Else (feature 5 > 22.5)
+           Predict: -0.9850746268656716
+         Else (feature 9 > 103969.0)
+          If (feature 2 <= 2.0)
+           Predict: -0.7910447761194029
+          Else (feature 2 > 2.0)
+           Predict: -1.0
+        Else (feature 1 > 771.5)
+         If (feature 1 <= 1110.0)
+          Predict: -0.9879032258064516
+         Else (feature 1 > 1110.0)
+          If (feature 7 <= 1357.0)
+           If (feature 7 <= 12.5)
+            Predict: -0.99609375
+           Else (feature 7 > 12.5)
+            Predict: -1.0
+          Else (feature 7 > 1357.0)
+           Predict: -0.9951807228915662
+       Else (feature 10 > 88097.0)
+        If (feature 7 <= 7.5)
+         If (feature 1 <= 1890.0)
+          If (feature 2 <= 2.0)
+           If (feature 16 <= 0.14033439289828956)
+            If (feature 13 <= 18.5)
+             If (feature 1 <= 1.5)
+              Predict: -0.9937629937629938
+             Else (feature 1 > 1.5)
+              Predict: -0.9996079200156832
+            Else (feature 13 > 18.5)
+             If (feature 6 <= 502944.5)
+              Predict: -1.0
+             Else (feature 6 > 502944.5)
+              Predict: -0.9997349589186324
+           Else (feature 16 > 0.14033439289828956)
+            If (feature 15 <= 0.10946435352513936)
+             If (feature 0 <= 1.5)
+              Predict: -0.9536231884057971
+             Else (feature 0 > 1.5)
+              Predict: -0.9950418345212272
+            Else (feature 15 > 0.10946435352513936)
+             Predict: -1.0
+          Else (feature 2 > 2.0)
+           If (feature 3 <= 20.0)
+            Predict: -1.0
+           Else (feature 3 > 20.0)
+            Predict: -0.9512195121951219
+         Else (feature 1 > 1890.0)
+          If (feature 13 <= 63.5)
+           Predict: -0.7820823244552058
+          Else (feature 13 > 63.5)
+           Predict: -1.0
+        Else (feature 7 > 7.5)
+         If (feature 2 <= 2.0)
+          If (feature 15 <= 0.10446435352513936)
+           If (feature 16 <= 0.01)
+            If (feature 15 <= 0.035)
+             Predict: -1.0
+            Else (feature 15 > 0.035)
+             Predict: -0.9900744416873449
+           Else (feature 16 > 0.01)
+            If (feature 16 <= 0.425)
+             If (feature 6 <= 3.5)
+              Predict: -0.9996219996219996
+             Else (feature 6 > 3.5)
+              Predict: -1.0
+            Else (feature 16 > 0.425)
+             Predict: -0.9969088098918083
+          Else (feature 15 > 0.10446435352513936)
+           If (feature 7 <= 17.5)
+            If (feature 1 <= 1596.5)
+             If (feature 15 <= 0.10946435352513936)
+              Predict: -0.9931506849315068
+             Else (feature 15 > 0.10946435352513936)
+              Predict: -1.0
+            Else (feature 1 > 1596.5)
+             Predict: -0.9489194499017681
+           Else (feature 7 > 17.5)
+            If (feature 13 <= 63.5)
+             If (feature 13 <= 62.333916561475164)
+              Predict: -0.9998965873836608
+             Else (feature 13 > 62.333916561475164)
+              Predict: -0.9975838115372999
+            Else (feature 13 > 63.5)
+             If (feature 10 <= 162156.5)
+              Predict: -0.9999224475551591
+             Else (feature 10 > 162156.5)
+              Predict: -1.0
+         Else (feature 2 > 2.0)
+          If (feature 15 <= 0.10446435352513936)
+           Predict: -1.0
+          Else (feature 15 > 0.10446435352513936)
+           If (feature 4 <= 0.305)
+            Predict: -0.88470066518847
+           Else (feature 4 > 0.305)
+            If (feature 2 <= 4.5)
+             Predict: -0.9761904761904762
+            Else (feature 2 > 4.5)
+             If (feature 7 <= 49.5)
+              Predict: -0.9902676399026764
+             Else (feature 7 > 49.5)
+              Predict: -1.0
+      Else (feature 2 > 9.5)
+       If (feature 7 <= 10.5)
+        Predict: 0.09292035398230089
+       Else (feature 7 > 10.5)
+        If (feature 1 <= 31.5)
+         If (feature 16 <= 0.065)
+          Predict: -1.0
+         Else (feature 16 > 0.065)
+          Predict: -0.9640449438202248
+        Else (feature 1 > 31.5)
+         Predict: -1.0
+     Else (feature 1 > 50077.0)
+      If (feature 7 <= 45.5)
+       If (feature 10 <= 338583.5)
+        If (feature 5 <= 2.5)
+         Predict: 1.0
+        Else (feature 5 > 2.5)
+         Predict: 0.99609375
+       Else (feature 10 > 338583.5)
+        Predict: 0.004739336492890996
+      Else (feature 7 > 45.5)
+       Predict: -1.0
+    Else (feature 12 > 1.5)
+     If (feature 13 <= 63.5)
+      If (feature 11 <= 1.5)
+       If (feature 6 <= 104619.5)
+        If (feature 10 <= 189924.0)
+         Predict: 1.0
+        Else (feature 10 > 189924.0)
+         Predict: 0.9907834101382489
+       Else (feature 6 > 104619.5)
+        If (feature 7 <= 213.5)
+         Predict: 1.0
+        Else (feature 7 > 213.5)
+         Predict: 0.9731543624161074
+      Else (feature 11 > 1.5)
+       If (feature 12 <= 3.5)
+        Predict: -0.029449423815621
+       Else (feature 12 > 3.5)
+        If (feature 10 <= 189924.0)
+         Predict: 0.6689342403628118
+        Else (feature 10 > 189924.0)
+         Predict: 1.0
+     Else (feature 13 > 63.5)
+      Predict: -1.0
+    """
 
 
     # Parser
@@ -103,7 +190,7 @@ if __name__ == "__main__":
 
 
     # Convert Tree to JSON
-    def tree_json(tree):
+    def tree_json(tree: str, model: str):
         data = []
         for line in tree.splitlines():
             if line.strip():
@@ -113,10 +200,18 @@ if __name__ == "__main__":
                 break
             if not line: break
         res = []
-        res.append({'name': 'Root', 'children': parse(data[1:])})
-        with open('data/structure.json', 'w') as outfile:
+        res.append({'name': model, 'children': parse(data[1:])})
+        # add feature names
+        # the 19 feature names as short strings (taken from GBT*.scala)
+        features = {0: "task_id", 1: "inst_num", 2: "task_type", 3: "plan_cpu", 4: "plan_mem",
+                    5: "sched_intv", 6: "job_exec", 7: "task_dur", 8: "inst_task_type",
+                    9: "inst_start", 10: "inst_end", 11: "seq_no", 12: "total_seq_no", 13: "cpu_avg",
+                    14: "cpu_max", 15: "mem_avg", 16: "mem_max", 17: "cpu_cols_vec", 18: "mr"}
+        # drop prefix "feature " from keys
+
+        with open('data/GBT_high_weight_tree_alibaba2018_structure.json', 'w') as outfile:
             json.dump(res[0], outfile)
         print('Conversion Success !')
 
 
-    tree_json(tree_to_json)
+    tree_json(tree_to_json, model="GBTNestedCVOuter1perc")
